@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react';
-import { inputStyle, labelStyle } from './ElementsStyles';
+import { inputStyle, labelStyle } from '../Styles/ElementsStyles';
 
 type IDateInput = ComponentProps<'input'> & {
 	label: string;
