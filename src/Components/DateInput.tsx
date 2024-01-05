@@ -1,4 +1,5 @@
 import React, { ComponentProps } from 'react';
+import { inputStyle, labelStyle } from './ElementsStyles';
 
 type IDateInput = ComponentProps<'input'> & {
 	label: string;
@@ -7,8 +8,16 @@ type IDateInput = ComponentProps<'input'> & {
 const DateInput = ({ label, ...props }: IDateInput) => {
 	return (
 		<div>
-			<label htmlFor={label}>{label}</label>
-			<input id={label} name={label} type='date' {...props} />
+			<label style={labelStyle} htmlFor={label}>
+				{label}
+			</label>
+			<input
+				style={inputStyle}
+				id={label}
+				name={label}
+				type='date'
+				{...props}
+			/>
 		</div>
 	);
 };
