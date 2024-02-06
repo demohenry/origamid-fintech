@@ -1,5 +1,9 @@
 import React, { ComponentProps } from 'react';
-import { inputStyle, labelStyle } from '../Styles/ElementsStyles';
+import {
+	errMessageStyle,
+	inputStyle,
+	labelStyle,
+} from '../Styles/ElementsStyles';
 
 type IDateInput = ComponentProps<'input'> & {
 	label: string;
@@ -20,7 +24,7 @@ const DateInput = ({ label, errorMessage, ...props }: IDateInput) => {
 				{...props}
 			/>
 			<div>
-				<span style={{ color: 'red', fontSize: '10px' }}>{errorMessage}</span>
+				<span style={errMessageStyle}>{errorMessage}</span>
 			</div>
 		</div>
 	);

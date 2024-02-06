@@ -20,3 +20,8 @@ export const inputStyle: CSSProperties = {
 	fontFamily: 'monospace',
 	...generalStyle,
 };
+
+export const errMessageStyle: CSSProperties = {
+	color: 'red',
+	fontSize: '10px',
+};
