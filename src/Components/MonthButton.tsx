@@ -1,6 +1,6 @@
 import React from 'react';
 import { useData } from '../Context/DataContext';
-import { MonthButtonStyle } from '../Styles/ElementsStyles';
+import { monthButtonStyle } from '../Styles/ElementsStyles';
 
 function MonthName(n: number) {
 	const date = new Date();
@@ -28,7 +28,7 @@ const MonthButton = ({ n }: { n: number }) => {
 	}
 
 	return (
-		<button style={MonthButtonStyle} onClick={() => setMonth(n)}>
+		<button style={monthButtonStyle} onClick={() => setMonth(n)}>
 			{MonthName(n)}
 		</button>
 	);

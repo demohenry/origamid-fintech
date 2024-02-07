@@ -26,7 +26,7 @@ export const errMessageStyle: CSSProperties = {
 	fontSize: '10px',
 };
 
-export const MonthButtonStyle: CSSProperties = {
+export const monthButtonStyle: CSSProperties = {
 	padding: 'var(--gap) var(--gap-s)',
 	backgroundColor: 'var(--color-3)',
 	borderRadius: 'var(--gap)',
