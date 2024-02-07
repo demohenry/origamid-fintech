@@ -1,12 +1,12 @@
 import React from 'react';
-import MouthButton from './MouthButton';
+import MonthButton from './MonthButton';
 
 const Months = () => {
 	return (
 		<div className='flex'>
-			<MouthButton n={-2} />
-			<MouthButton n={-1} />
-			<MouthButton n={0} />
+			<MonthButton n={-2} />
+			<MonthButton n={-1} />
+			<MonthButton n={0} />
 		</div>
 	);
 };

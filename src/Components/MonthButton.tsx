@@ -1,6 +1,6 @@
 import React from 'react';
 import { useData } from '../Context/DataContext';
-import { MouthButtonStyle } from '../Styles/ElementsStyles';
+import { MonthButtonStyle } from '../Styles/ElementsStyles';
 
 function MonthName(n: number) {
 	const date = new Date();
@@ -13,7 +13,7 @@ function formatDate(date: Date) {
 	return dateString;
 }
 
-const MouthButton = ({ n }: { n: number }) => {
+const MonthButton = ({ n }: { n: number }) => {
 	const { setInicio, setFinal } = useData();
 
 	function setMonth(n: number) {
@@ -28,10 +28,10 @@ const MouthButton = ({ n }: { n: number }) => {
 	}
 
 	return (
-		<button style={MouthButtonStyle} onClick={() => setMonth(n)}>
+		<button style={MonthButtonStyle} onClick={() => setMonth(n)}>
 			{MonthName(n)}
 		</button>
 	);
 };
 
-export default MouthButton;
+export default MonthButton;
