@@ -25,3 +25,13 @@ export const errMessageStyle: CSSProperties = {
 	color: 'red',
 	fontSize: '10px',
 };
+
+export const MouthButtonStyle: CSSProperties = {
+	padding: 'var(--gap) var(--gap-s)',
+	backgroundColor: 'var(--color-3)',
+	borderRadius: 'var(--gap)',
+	border: 'none',
+	color: 'var(--color-2)',
+	fontWeight: '600',
+	textTransform: 'capitalize',
+};
