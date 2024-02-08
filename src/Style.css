@@ -126,6 +126,13 @@ ul {
   
 }
 
+/* daterange */
+.daterange {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
 /* Resumo */
 
 .resumo {
