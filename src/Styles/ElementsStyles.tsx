@@ -39,7 +39,4 @@ export const monthButtonStyle: CSSProperties = {
 export const failSellSpan: CSSProperties = {
 	color: 'red',
 	fontSize: '10px',
-	whiteSpace: 'noWrap',
-	position: 'absolute',
-	bottom: '5px',
 };

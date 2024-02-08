@@ -1,15 +1,18 @@
 import React from 'react';
 import { useData } from '../Context/DataContext';
 import { failSellSpan } from '../Styles/ElementsStyles';
+import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa6';
+import { useState } from 'react';
 
 const Resumo = () => {
 	const { data } = useData();
+	const [showFailStatus, setShowFailStatus] = useState(false);
 
 	if (!data) return null;
 	return (
 		<section>
 			<div className='resumo flex mb'>
-				<div className='box'>
+				<div className='box of-h' style={{ minWidth: 'fit-content' }}>
 					<h2>Vendas</h2>
 					<span className='sucess'>
 						{data
@@ -17,7 +20,27 @@ const Resumo = () => {
 							.reduce((acc, vendas) => acc + vendas.preco, 0)
 							.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
 					</span>
-					<div>
+					{data.filter((i) => i.status == 'falha').length && showFailStatus ? (
+						<FaRegEye
+							style={{ cursor: 'pointer', float: 'right' }}
+							onClick={() => setShowFailStatus(!showFailStatus)}
+							title='Esconder vendas falhas'
+							rel='tooltip'
+						/>
+					) : (
+						''
+					)}
+					{data.filter((i) => i.status == 'falha').length && !showFailStatus ? (
+						<FaRegEyeSlash
+							style={{ cursor: 'pointer', float: 'right' }}
+							onClick={() => setShowFailStatus(!showFailStatus)}
+							title='Exibir vendas falhas'
+							rel='tooltip'
+						/>
+					) : (
+						''
+					)}
+					<div className={`fail-status ${showFailStatus ? 'active' : ''}`}>
 						{data.filter((i) => i.status == 'falha').length ? (
 							<span
 								style={failSellSpan}
@@ -57,7 +80,7 @@ const Resumo = () => {
 					</span>
 				</div>
 			</div>
-			<div className='box'>Gráficos</div>
+			<div className='box mb'>Gráficos</div>
 		</section>
 	);
 };

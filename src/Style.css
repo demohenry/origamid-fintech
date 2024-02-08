@@ -43,6 +43,10 @@ ul {
   margin: 0;
 }
 
+.of-h {
+  overflow: hidden;
+}
+
 .flex {
   display: flex;
   gap: var(--gap);
@@ -101,6 +105,15 @@ ul {
   font-size: 1rem;
   margin-bottom: var(--color-1);
   color: var(--color-1);
+}
+
+.fail-status {
+  display: none;
+}
+
+.fail-status.active {
+  display: flex;
+  height: 0;
 }
 
 /* Vendas */
