@@ -35,3 +35,11 @@ export const monthButtonStyle: CSSProperties = {
 	fontWeight: '600',
 	textTransform: 'capitalize',
 };
+
+export const failSellSpan: CSSProperties = {
+	color: 'red',
+	fontSize: '10px',
+	whiteSpace: 'noWrap',
+	position: 'absolute',
+	bottom: '5px',
+};

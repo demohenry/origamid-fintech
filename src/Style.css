@@ -4,9 +4,12 @@ html {
   --color-3: #eceadd;
   --color-4: #f7f8f5;
   --color-5: #ffffff;
+  --sucess: #008c4f;
+  --warning: #c4c42c;
 
   --gap-s: 0.625rem;
   --gap: 1.25rem;
+
 }
 
 body {
@@ -17,6 +20,7 @@ body {
 }
 
 .box {
+  position: relative;
   padding: var(--gap);
   border-radius: var(--gap);
   background: var(--color-5);
@@ -70,6 +74,14 @@ ul {
 
 .bg-5 {
   background: var(--color-5);
+}
+
+.sucess {
+  color: var(--sucess);
+}
+
+.warning {
+  color: var(--warning);
 }
 
 .container {
