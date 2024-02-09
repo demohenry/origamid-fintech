@@ -1,5 +1,5 @@
 import React from 'react';
-import fintech from '../assets/fintech.svg';
+import { NavLink } from 'react-router-dom';
 import resumo from '../assets/icons/resumo.svg';
 import vendas from '../assets/icons/vendas.svg';
 import SVGComponent, { SVGLibrary } from '../assets/SVGComponent';
@@ -13,13 +13,13 @@ const Sidenav = () => {
 					<span>
 						<img src={resumo} alt='' />
 					</span>
-					<a href=''>Resumo</a>
+					<NavLink to='/'>Resumo</NavLink>
 				</li>
 				<li>
 					<span>
 						<img src={vendas} alt='' />
 					</span>
-					<a href=''>Vendas</a>
+					<NavLink to='/vendas'>Vendas</NavLink>
 				</li>
 			</ul>
 		</nav>
