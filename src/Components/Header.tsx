@@ -9,14 +9,11 @@ const Header = () => {
 	const location = useLocation();
 
 	useEffect(() => {
-		if (location.pathname === '/') {
-			setTitle('Resumo');
-			document.title = 'Fintech | Resumo';
-		}
-		if (location.pathname === '/vendas') {
-			setTitle('Vendas');
-			document.title = 'Fintech | Vendas';
-		}
+		const formattedLocation =
+			location.pathname.replace('/', '').charAt(0).toUpperCase() +
+			location.pathname.slice(2);
+		setTitle(!formattedLocation ? 'Resumo' : formattedLocation);
+		document.title = !formattedLocation ? 'Resumo' : 'Vendas';
 	}, [location]);
 
 	return (
