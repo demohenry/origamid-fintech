@@ -13,7 +13,9 @@ const Header = () => {
 			location.pathname.replace('/', '').charAt(0).toUpperCase() +
 			location.pathname.slice(2);
 		setTitle(!formattedLocation ? 'Resumo' : formattedLocation);
-		document.title = !formattedLocation ? 'Resumo' : 'Vendas';
+		document.title = !formattedLocation
+			? 'Fintech | Resumo'
+			: 'Fintech | Vendas';
 	}, [location]);
 
 	return (
