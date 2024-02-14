@@ -1,17 +1,8 @@
 import React from 'react';
 
-const LoadingStyle = {
-	border: 'var(--gap-s) solid var(--color-3)',
-	borderRightColor: 'blue',
-	width: 'var(--gap)',
-	height: 'var(--gap)',
-	borderRadius: '50%',
-	animation: 'spin 1s infinite',
-};
-
 const Loading = () => {
 	return (
-		<div style={LoadingStyle}>
+		<div className='loadin-style'>
 			<style>
 				{`
           @keyframes spin {

@@ -173,3 +173,17 @@ ul {
   text-decoration: none;
   color: inherit;
 }
+
+.loadin-style {
+	border: var(--gap-s) solid var(--color-3);
+	border-right-color: blue;
+	width: var(--gap);
+	height: var(--gap);
+	border-radius: 50%;
+  animation: spin 1s infinite;
+
+  position: absolute;
+  z-index: 3;
+  top: 50vh;
+  right: 35vw;
+};
