@@ -9,14 +9,18 @@ const Header = () => {
 	const location = useLocation();
 
 	useEffect(() => {
+		const segments = location.pathname.split('/');
 		const formattedLocation =
-			location.pathname.replace('/', '').charAt(0).toUpperCase() +
-			location.pathname.slice(2);
+			segments[1] === 'vendas'
+				? 'Vendas'
+				: segments[1].charAt(0).toUpperCase() + segments[1].slice(1);
 		setTitle(!formattedLocation ? 'Resumo' : formattedLocation);
 		document.title = !formattedLocation
 			? 'Fintech | Resumo'
 			: 'Fintech | Vendas';
 	}, [location]);
+
+	console.log(location);
 
 	return (
 		<header className='mb'>
