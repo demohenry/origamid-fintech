@@ -3,6 +3,7 @@ import { useData } from '../Context/DataContext';
 import { failSellSpan } from '../Styles/ElementsStyles';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa6';
 import { useState } from 'react';
+import ChartsSells from '../Components/ChartsSells';
 
 const Resumo = () => {
 	const { data } = useData();
@@ -80,7 +81,9 @@ const Resumo = () => {
 					</span>
 				</div>
 			</div>
-			<div className='box mb'>Gráficos</div>
+			<div className='box mb'>
+				<ChartsSells data={data} />
+			</div>
 		</section>
 	);
 };
