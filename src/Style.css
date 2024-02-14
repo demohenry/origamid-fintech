@@ -114,11 +114,14 @@ ul {
 }
 
 .sidenav li a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   flex: 1;
   font-size: 1.125rem;
   text-decoration: none;
   color: var(--color-1);
-  padding: var(--gap-s) 0;
+  padding: 2px 0;
 }
 
 .sidenav li:hover span {
@@ -185,5 +188,5 @@ ul {
   position: absolute;
   z-index: 3;
   top: 50vh;
-  right: 35vw;
+  right: 50vw;
 };

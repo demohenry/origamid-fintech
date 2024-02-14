@@ -10,16 +10,20 @@ const Sidenav = () => {
 			<SVGComponent children={SVGLibrary.fintech} height='50' />
 			<ul>
 				<li>
-					<span>
-						<img src={resumo} alt='' />
-					</span>
-					<NavLink to='/'>Resumo</NavLink>
+					<NavLink to='/'>
+						<span>
+							<img src={resumo} alt='' />
+						</span>
+						Resumo
+					</NavLink>
 				</li>
 				<li>
-					<span>
-						<img src={vendas} alt='' />
-					</span>
-					<NavLink to='/vendas'>Vendas</NavLink>
+					<NavLink to='/vendas'>
+						<span>
+							<img src={vendas} alt='' />
+						</span>
+						Vendas
+					</NavLink>
 				</li>
 			</ul>
 		</nav>
