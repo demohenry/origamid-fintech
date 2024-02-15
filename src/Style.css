@@ -10,6 +10,10 @@ html {
   --gap-s: 0.625rem;
   --gap: 1.25rem;
 
+  @media (max-width: 700px) {
+    --gap-s:0.5rem;
+    --gap: 0.75rem;
+  }
 }
 
 body {
@@ -50,6 +54,10 @@ ul {
 .flex {
   display: flex;
   gap: var(--gap);
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 }
 
 .flex > * {
@@ -93,6 +101,10 @@ ul {
   padding: var(--gap);
   gap: var(--gap);
   grid-template-columns: 240px auto;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Sidenav */
@@ -122,6 +134,10 @@ ul {
   text-decoration: none;
   color: var(--color-1);
   padding: 2px 0;
+
+  @media (max-width: 700px) {
+    font-size: 0.875rem;
+  }
 }
 
 .sidenav li:hover span {
@@ -134,6 +150,14 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
+
+  @media (max-width: 1000px) {
+   grid-template-columns: 1fr;
+
+   :last-child {
+     grid-row: 1;
+   }
+  }
 }
 
 /* Resumo */
@@ -141,6 +165,10 @@ ul {
 .resumo {
   font-size: 1.2rem;
   font-weight: 600;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 }
 
 .resumo h2 {
@@ -162,6 +190,25 @@ ul {
 .vendas-container {
   overflow-x: auto;
   max-height: 65vh;
+
+  @media (max-height: 764px){
+    max-height: 56vh;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px 10px var(--color-3);
+  border: solid 3px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px 10px var(--color-2);
+  border: solid 3px transparent;
+  border-radius: 7px;
 }
 
 .venda {
