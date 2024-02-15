@@ -11,7 +11,7 @@ const Vendas = () => {
 	if (loading) return <Loading />;
 	if (!data) return null;
 	return (
-		<ul>
+		<ul className='vendas-container'>
 			{data.map((venda) => (
 				<li key={venda.id}>
 					<ItemSell venda={venda} />

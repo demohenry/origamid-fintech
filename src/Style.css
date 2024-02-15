@@ -159,6 +159,10 @@ ul {
 }
 
 /* Vendas */
+.vendas-container {
+  overflow-x: auto;
+  max-height: 65vh;
+}
 
 .venda {
   display: grid;
